@@ -26,7 +26,6 @@ function App() {
     fetchUsers();
   }, []);
 
-  // todo: create components and display the main content using conditional rendering
   return (
     <>
       <Header
@@ -37,7 +36,6 @@ function App() {
       />
 
       <main>
-        {" "}
         {user ? (
           <>
             {currentPage === "voting" && <Voting />}

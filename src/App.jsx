@@ -35,14 +35,18 @@ function App() {
         handleLogout={handleLogout}
         setCurrentPage={setCurrentPage}
       />
-      {user ? (
-        <>
-          {currentPage === "voting" && <Voting />}
-          {currentPage === "admin" && <Admin />}
-        </>
-      ) : (
-        <LogIn />
-      )}
+
+      <main>
+        {" "}
+        {user ? (
+          <>
+            {currentPage === "voting" && <Voting />}
+            {currentPage === "admin" && <Admin />}
+          </>
+        ) : (
+          <LogIn />
+        )}
+      </main>
       <Footer />
     </>
   );
